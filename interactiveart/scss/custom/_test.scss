@@ -1,0 +1,100 @@
+
+body {
+	/*background-color: red;*/
+	width: 100%;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.square {
+    background: green;
+    width: 30vw;
+    height: 40vw;
+}
+
+.page-header {
+	height: 200px;
+    background: #143E5E;
+    border:1px solid #CCC;
+    width: 100%;
+
+	h1 {
+		color: $white;
+	    font-size: 70px;
+	}
+}
+
+.callout {
+	margin-top: 90px;
+
+	@include breakpoint(medium only) {
+		margin-top: 100px;
+	}
+}
+
+.dropdown  {
+ 	float: right;
+ 	margin-top: 30px;
+
+ 	.menu {
+ 		color: white;
+ 	}
+}
+
+a {
+ 	color: red;
+
+ 	&:hover {
+ 		color: green;
+ 	}
+ }
+
+.thumbnail {
+	border: solid 40px black;
+}
+
+.page-footer {
+	height: 400px;
+    background: #000080;
+    border:1px solid #CCC;
+    width: 100%;
+    background-color: #143E5E;
+
+    h1 {
+    	color: white;
+    }
+
+    .dropdown{
+		margin-top: 0;
+	}
+
+	.logo {
+		margin-top: 40px;
+		
+		@include breakpoint(medium down) {
+			display: none;
+		}
+	}
+}
+
+.textarea {
+	margin-bottom: 200px;
+}
+
+
+
+
