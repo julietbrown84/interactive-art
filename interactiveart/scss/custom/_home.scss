@@ -1,0 +1,68 @@
+.nav {
+	position: absolute;
+    z-index: 9999999999;
+    top: 0;
+    left: 1340px;
+    background-color: red;
+    height: 850px;
+    width: 120px;
+    margin: 0;
+
+    &__list {
+    	margin-bottom: 55px;
+    }
+}
+
+.background-green-square {
+	position: absolute; width: 800px; 
+    z-index: -9999999;
+    background:#84bd00;
+    position: absolute;
+    height: 540px;
+    top: 0;
+    left: 0;
+ }
+
+ .background-image {
+   position: absolute;
+    z-index: -9999;
+    top: 0px;
+    left: 350px;
+    margin: 0;
+  }
+
+
+
+
+
+  #line {
+  	position: absolute;
+    top: 50px;
+    left: -100px;
+    width: 500px;
+    margin: 0;
+    -webkit-transform: rotateZ(53.1deg);
+    border-width: 1px;      border-style: solid;                          
+    border-image: linear-gradient(to right, #ffffff 0%,#ffffff 49%,#000000 50%,#000000 100%) 1;
+}
+
+
+#p1 {
+	border-radius: 5px;
+    width: 10px;
+    background: #000;
+    position: absolute;
+    height: 10px;
+    top: 45px;
+    left: 145px;
+}
+
+#p2 {
+	 border-radius: 5px;
+    width: 10px;
+    background: #000;
+    position: absolute;
+    height: 10px;
+    top: 245px;
+    left: 295px;
+}
