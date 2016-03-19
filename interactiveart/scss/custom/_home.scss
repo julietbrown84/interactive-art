@@ -1,4 +1,4 @@
-.nav {
+.main-nav {
 	position: absolute;
     z-index: 9999999999;
     top: 0;
@@ -23,19 +23,15 @@
     left: 0;
  }
 
- .background-image {
+.background-image {
    position: absolute;
     z-index: -9999;
     top: 0px;
     left: 350px;
     margin: 0;
-  }
+ }
 
-
-
-
-
-  #line {
+ #line {
   	position: absolute;
     top: 50px;
     left: -100px;
