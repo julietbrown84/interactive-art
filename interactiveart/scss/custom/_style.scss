@@ -1,4 +1,4 @@
-.sl-slider-wrapper {
+/*.sl-slider-wrapper {
 	width: 800px;
 	height: 400px;
 	margin: 0 auto;
@@ -14,7 +14,7 @@
 }
 
 /* Slide wrapper and slides */
-
+/*
 .sl-slide,
 .sl-slides-wrapper,
 .sl-slide-inner {
@@ -31,7 +31,7 @@
 
 /* The duplicate parts/slices */
 
-.sl-content-slice {
+/*.sl-content-slice {
 	overflow: hidden;
 	position: absolute;
 	-webkit-box-sizing: content-box;
@@ -45,9 +45,9 @@
 	backface-visibility: hidden;
 	opacity : 1;
 }
-
+*/
 /* Horizontal slice */
-
+/*
 .sl-slide-horizontal .sl-content-slice {
 	width: 100%;
 	height: 50%;
@@ -68,10 +68,10 @@
 	top: 50%;
 	padding: 0px 200px 200px 200px;
 }
-
+*/
 /* Vertical slice */
 
-.sl-slide-vertical .sl-content-slice {
+/*.sl-slide-vertical .sl-content-slice {
 	width: 50%;
 	height: 100%;
 	top: -200px;
@@ -91,10 +91,10 @@
 	left: 50%;
 	padding: 200px 200px 200px 0px;
 }
-
+*/
 /* Content wrapper */
 /* Width and height is set dynamically */
-.sl-content-wrapper {
+/*.sl-content-wrapper {
 	background: blue;
 	position: absolute;
 }
@@ -104,13 +104,13 @@
 	height: 100%;
 	background: #fff;
 }
-
+*/
 /* Default styles for background colors */
-.sl-slide-horizontal .sl-slide-inner {
+/*.sl-slide-horizontal .sl-slide-inner {
 	background: #ddd;
 }
 
 .sl-slide-vertical .sl-slide-inner {
 	background: #ccc;
 }
-
+*/

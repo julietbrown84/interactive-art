@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>Creating a Simple Parallax Scrolling Website</title>
+       <link rel="stylesheet" href="css/app.css"/>
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+ </head> 
+  
+<body style="position:relative">
+<canvas id="myCanvas" width="10000" height="850" style="border:1px solid #d3d3d3;">
+</canvas> 
+
+  <div id="main">
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ open</span>
+  </div>
+
+    <hr id="line">
+      <div class="background-image" style="">
+          <img src="img/main-home-page-image.jpg" width="620px"/>
+      </div
+      >
+    <button onclick="Vertical_line();return true;"></button>
+      <div class="background-green-square"></div>
+      <div id="p1" style=""></div>
+      <div id="p2"></div>
+
+
+
+<script>
+
+    function pow2(n) {
+      return n * n;
+    }
+
+    var p1 = {
+        id: "p1",
+        x: 150,
+        y: 50
+    };
+    var p2 = {
+        id: "p2",
+        x: 300,
+        y: 250
+    };
+    var select = null;
+
+    function getAngle() {
+
+        var dist = Math.sqrt(pow2(p1.x - p2.x) + pow2(p1.y - p2.y));
+        var l = document.getElementById("line");
+        var cos = (p2.x - p1.x) / Math.sqrt(pow2(p2.x - p1.x) + pow2(p2.y - p1.y));
+        var behind = p1.x < p2.x;
+        var higher = p1.y > p2.y;
+        l.style.width = (dist * 2) + "px";
+        l.style.left = (p1.x - dist) + "px";
+        l.style.top = (p1.y) + "px";
+
+        l.style.transform = "rotateZ(" + (higher ? -1 : 1) * Math.acos(cos) * (180 / Math.PI) + "deg)";
+    }
+
+    var down = false
+
+    document.addEventListener("mousemove", function (e) {
+        if (select) {
+            select.x = e.pageX;
+            select.y = e.pageY;
+            var p = document.getElementById(select.id);
+            p.style.left = (select.x - 5) + "px";
+            p.style.top = (select.y - 5) + "px";
+            getAngle();
+        }
+    });
+
+    document.addEventListener("mouseup", function (e) {
+        if (!select) select = p1;
+        else if (select == p1) select = p2;
+        else select = null;
+    });
+
+    document.addEventListener("mousedown", function (e) {
+        down = true;
+        console.log("yopla");
+    });
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var lineTwo = c.getContext("2d");
+    var c3_context = c.getContext("2d");
+    var line = c.getContext("2d");
+    var context = c.getContext("2d");
+    
+    ctx.strokeStyle = 'black';
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(1300, 0);
+    ctx.lineTo(-1300, 1150);
+    ctx.stroke();
+
+    lineTwo.strokeStyle = 'black';
+    lineTwo.stroke();
+    lineTwo.beginPath();
+    lineTwo.moveTo(800, 200);
+    lineTwo.lineTo(-200, 950);
+    lineTwo.lineWidth = 1;
+    lineTwo.stroke();
+
+    c3_context.moveTo(480, 600.5);
+    c3_context.lineTo(0 , 240.5);
+    c3_context.lineWidth = 1;
+    c3_context.strokeStyle = "pink";
+    c3_context.stroke();
+   
+    line.moveTo(-180, 650.5);
+    line.lineTo(680, 1040.5);
+    lineTwo.lineWidth = 1;
+    line.strokeStyle = "blue";
+    line.stroke();
+      // imageObj.onload = function() {
+      //   context.drawImage(imageObj, 69, 50);
+      // };
+      // imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+    </script>
+
+</body>
+</html>
