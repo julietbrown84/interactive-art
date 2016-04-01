@@ -16,18 +16,16 @@
 <canvas id="myCanvas" width="10000" height="850" style="border:1px solid #d3d3d3;">
 </canvas>
 
+
     <hr id="line">
-      <div class="background-image" style="">
-          <img src="img/main-home-page-image.jpg" width="620px"/>
-      </div>
-    <button onclick="Vertical_line();return true;"</button>
-      	<div class="background-green-square">
-     	</div>
-
-      <div id="p1" style=""></div>
-      <div id="p2"></div>
-
-
+     	<div class="background-image" style="">
+          <img src="img/main-home-page-image.jpg" width="720px"/>
+      	</div>
+   	
+   	 	<button onclick="Vertical_line();return true;"</button>   	
+	    <div class="background-green-square columns large-7"></div>
+		    <div id="p1" style=""></div>
+		    <div id="p2"></div>
 
 <script>
 
@@ -135,8 +133,10 @@
 
 	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-end="width:100%;background:hsl(920, 100%, 50%);"></div>
 
-	<div id="intro" data-0="opacity:1;top:3%;transform:rotate(0deg);transform-origin:0 0;" data-500="opacity:0;top:-10%;transform:rotate(-90deg);">
-		<h1><a href="https://github.com/Prinzhorn/skrollr">skrollr</a></h1>
+	<div class="intro">
+		<div id="intro" class="columns large-4" data-0="opacity:1;top:3%;transform:rotate(0deg);transform-origin:0 0;" data-500="opacity:0;top:-10%;transform:rotate(-90deg);">
+			<h1><a href="">BAM</a></h1>
+		</div>
 	</div>
 
 	<div id="transform" data-500="transform:scale(0) rotate(0deg);" data-1000="transform:scale(1) rotate(1440deg);opacity:1;" data-1600="" data-1700="transform:scale(5) rotate(3240deg);opacity:0;">
@@ -150,9 +150,9 @@
 		<p>width, height, padding, font-size, z-index, blah blah blah</p>
 	</div>
 
-	<div id="easing_wrapper" data-0="display:none;" data-3900="display:block;" data-4900="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);" data-5900="background:rgba(0,0,0,1);color:rgb(255,255,255);" data-10000="top:0%;" data-12000="top:-100%;">
-		<div id="easing" data-3900="left:100%" data-4600="left:25%;">
-
+	<div id="easing_wrapper" width="100%" data-0="display:none;" data-3900="display:block;" data-4900="background:rgba(0, 0, 0, 0);color[swing]:rgb(0,0,0);" data-5900="background:rgba(0,0,0,1);color:rgb(255,255,255);" data-10000="top:0%;" data-12000="top:-100%;">
+		<div id="easing" class="easing" data-3900="left:100%" data-4600="left:25%;">
+		 <img src="img/main-home-page-image.jpg" width="620px"/>
 			<h2>easing?</h2>
 			<p>sure.</p>
 			<p>let me dim the <span data-3900="" data-4900="color[swing]:rgb(0,0,0);" data-5900="color:rgb(255,255,0);">lights</span> for this one...</p>
